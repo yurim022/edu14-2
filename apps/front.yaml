@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: front
+  namespace: argocd
+  # Add a this finalizer ONLY if you want these to cascade delete.
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+
+spec:
+  project: edu31
+  
+  source:
+    repoURL: https://github.com/shclub/edu14-2.git
+    targetRevision: HEAD
+    path: charts/front
+  
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: edu31
+    
+  syncPolicy:
+    automated: 
+      prune: true 
+      selfHeal: true   
+    # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.  
+    syncOptions:
+      - CreateNamespace=false   
