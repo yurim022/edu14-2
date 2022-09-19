@@ -115,7 +115,7 @@ auth:
   username: edu 
   ## @param auth.password Password for the new user. Ignored if existing secret is provided
   ##
-  password: edu1234
+  password: caravan 
   ## @param auth.replicationUser MariaDB replication user
   ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mariadb#setting-up-a-replication-cluster
   ##
@@ -144,7 +144,7 @@ auth:
 ## @param initdbScripts Dictionary of initdb scripts
 ## Specify dictionary of scripts to be run at first boot
 ## Example:
-## initdbScripts:
+##initdbScripts:
 ##   my_init_script.sh: |
 ##      #!/bin/bash
 ##      echo "Do something."

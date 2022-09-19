@@ -14,7 +14,14 @@ spec:
         app: backend
     spec:
       containers:
-      - image: ghcr.io/shclub/edu12-4:master
-        name: backend
+      - name: backend
+        image: ghcr.io/shclub/edu12-4:master 
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: "prd"
+        - name: SPRING_DATASOURCE_USERNAM
+          value: "edu"
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: "caravan"
         ports:
         - containerPort: 8080
