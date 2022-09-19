@@ -9,3 +9,23 @@ spec:
   selector:	
     app: backend
   type: ClusterIP  
+  
+  ---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: backend
+  namespace: edu31
+spec:
+  host: backend-edu31.apps.211-34-231-82.nip.io
+  port:
+    targetPort: https
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: passthrough
+  to:
+    kind: Service
+    name: backend
+    weight: 100    
+  wildcardPolicy: None   
+
