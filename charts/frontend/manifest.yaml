@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: front
+  name: frontend
   labels:
-    app: front
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: front
+      app: frontend
   template:
     metadata:
       labels:
-        app: front
+        app: frontend
     spec:
       containers:
-      - name: front
+      - name: frontend
         image: ghcr.io/shclub/edu12-3:master
         env:
         - name: REACT_APP_API_URL
@@ -27,10 +27,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: front
+  name: frontend
 spec:
   selector:
-    app: front
+    app: frontend
   ports:
     - protocol: TCP
       port: 80
@@ -41,10 +41,10 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: front
+  name: frontend
   namespace: edu31
 spec:
-  host: front-edu31.apps.211-34-231-82.nip.io
+  host: frontend-edu31.apps.211-34-231-82.nip.io
   port:
     targetPort: https
   tls:
@@ -52,6 +52,6 @@ spec:
     termination: passthrough
   to:
     kind: Service
-    name: front
+    name: frontend
     weight: 100    
   wildcardPolicy: None   

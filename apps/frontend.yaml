@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: front
+  name: frontend
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
   finalizers:
@@ -13,7 +13,7 @@ spec:
   source:
     repoURL: https://github.com/shclub/edu14-2.git
     targetRevision: HEAD
-    path: charts/front
+    path: charts/frontend
   
   destination:
     server: https://kubernetes.default.svc
