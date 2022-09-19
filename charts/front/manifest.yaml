@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: httpd
+        image: ghcr.io/shclub/edu12-3:master 
         ports:
         - containerPort: 80
 

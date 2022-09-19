@@ -300,7 +300,7 @@ primary:
   ##
   podSecurityContext:
     enabled: true
-    fsGroup: 1001420000 #1001
+    fsGroup: 1000690000 #1001
   ## MariaDB primary container security context
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-container
   ## @param primary.containerSecurityContext.enabled MariaDB primary container securityContext
@@ -309,7 +309,7 @@ primary:
   ##
   containerSecurityContext:
     enabled: true
-    runAsUser: 1001420000 #1001
+    runAsUser: 1000690000 #1001
     runAsNonRoot: true
   ## MariaDB primary container's resource requests and limits
   ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
