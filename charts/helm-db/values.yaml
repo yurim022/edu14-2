@@ -152,7 +152,7 @@ auth:
 #initdbScripts: {}
 initdbScripts:
   init.sql: |
-  create sequence hibernate_sequence;
+  "create sequence hibernate_sequence;
   create table employee
   (
     id              long    primary key,
@@ -160,7 +160,7 @@ initdbScripts:
     empDeptName         varchar(255),
     empTelNo         varchar(20),
     empMail         varchar(25)
-  );
+  );"
 
 ## @param initdbScriptsConfigMap ConfigMap with the initdb scripts (Note: Overrides `initdbScripts`)
 ##
