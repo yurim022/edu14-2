@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/shclub/edu12-3:v3
+        image: ghcr.io/shclub/edu12-3:master
         env:
         - name: REACT_APP_API_URL
           value: "http://backend" 
