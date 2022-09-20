@@ -19,7 +19,7 @@ spec:
         env:
         - name: SPRING_PROFILES_ACTIVE
           value: "prd"
-        - name: SPRING_DATASOURCE_USERNAM
+        - name: SPRING_DATASOURCE_USERNAME
           value: "edu"
         - name: SPRING_DATASOURCE_PASSWORD
           value: "caravan"

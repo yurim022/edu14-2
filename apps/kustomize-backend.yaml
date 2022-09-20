@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kustomize-backend
+  name: edu31-kustomize-backend
   namespace: argocd
   # Add a this finalizer ONLY if you want these to cascade delete.
   finalizers:
@@ -17,7 +17,7 @@ spec:
   
   destination:
     server: https://kubernetes.default.svc
-    namespace: edu31
+    #namespace: edu31
   
   syncPolicy:
     automated: 

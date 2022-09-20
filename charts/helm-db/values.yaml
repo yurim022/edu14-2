@@ -149,7 +149,10 @@ auth:
 ##      #!/bin/bash
 ##      echo "Do something."
 ##
-initdbScripts: {}
+#initdbScripts: {}
+initdbScripts:
+  init.sql: |
+    ./schema.sql
 ## @param initdbScriptsConfigMap ConfigMap with the initdb scripts (Note: Overrides `initdbScripts`)
 ##
 initdbScriptsConfigMap: ""
