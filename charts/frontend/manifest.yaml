@@ -46,10 +46,10 @@ metadata:
 spec:
   host: frontend-edu31.apps.211-34-231-82.nip.io
   port:
-    targetPort: https
-  tls:
-    insecureEdgeTerminationPolicy: Redirect
-    termination: passthrough
+    targetPort: 80
+#  tls:
+#    insecureEdgeTerminationPolicy: Redirect
+#    termination: passthrough
   to:
     kind: Service
     name: frontend
