@@ -24,6 +24,6 @@ spec:
         - name: SPRING_DATASOURCE_PASSWORD
           value: "caravan"
         - name: SPRING_DATASOURCE_URL
-          value: "jdbc:mysql://helm-db-mariadb:3306/edu"
+          value: "jdbc:mariadb://helm-db-mariadb:3306/edu"
         ports:
         - containerPort: 8080
