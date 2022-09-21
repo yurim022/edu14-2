@@ -157,7 +157,7 @@ initdbScripts:
      mysql -P 3306 -uedu -pcaravan -e  "use edu; create sequence hibernate_sequence; \
   create table employee \
   (
-    id              long    primary key, \
+    id              int    primary key, \
     empName         	varchar(255), \
     empDeptName         varchar(255), \
     empTelNo         varchar(20), \
