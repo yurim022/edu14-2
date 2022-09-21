@@ -16,9 +16,9 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/shclub/edu12-3:v5
+        image: ghcr.io/shclub/edu12-3:v1
         env:
-        - name: REACT_APP_API_URL
+        - name: BACKEND_API_URL
           value: "http://backend" 
         ports:
         - containerPort: 80
