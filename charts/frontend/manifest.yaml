@@ -41,7 +41,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: frontend
-  namespace: edu31
 spec:
   host: frontend-edu31.apps.211-34-231-82.nip.io
   port:
